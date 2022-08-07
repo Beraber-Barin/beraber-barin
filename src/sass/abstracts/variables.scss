@@ -1,0 +1,100 @@
+@use "functions" as *;
+@use "../base/colors.scss" as *;
+$desktop-width: 700px;
+$letter-spacing: rem(3);
+$border-radius: 8px;
+$btn-sizes: ("large", "default", "small", "tiny");
+$btn-paddings: (
+  (rem(16), rem(45)),
+  (rem(12), rem(24)),
+  (rem(8), rem(16)),
+  (rem(4), rem(8))
+);
+$btn-icon-width-height: (
+  (rem(24), rem(24)),
+  (rem(24), rem(24)),
+  (rem(20), rem(20)),
+  (rem(16), rem(16))
+);
+$btn-text-size: (rem(16), rem(16), rem(14), rem(12));
+$btn-secondary-opacity: (
+  "default": 0.08,
+  "hover": 0.12,
+  "focus": 0.2,
+  "disabled": 1,
+);
+
+$btn-colors-map: (
+  "primary": (
+    "default": (
+      "background-color": $blue,
+      "color": $white,
+    ),
+    "hover": (
+      "background-color": $white,
+      "color": $blue,
+    ),
+    "focus": (
+      "background-color": $blue,
+      "color": $white,
+    ),
+    "disabled": (
+      "background-color": var(--black-50),
+      "color": var(--black-70),
+    ),
+  ),
+  "secondary": (
+    "default": (
+      "background-color": $white,
+      "color": $blue,
+    ),
+    "hover": (
+      "background-color": $blue,
+      "color": $white,
+    ),
+    "focus": (
+      "background-color": $white,
+      "color": $blue,
+    ),
+    "disabled": (
+      "background-color": var(--black-50),
+      "color": var(--black-70),
+    ),
+  ),
+  "ui-danger": (
+    "default": (
+      "background-color": $red,
+      "color": $white,
+    ),
+    "hover": (
+      "background-color": var(--fire-engeine-red-60),
+      "color": var(--white),
+    ),
+    "focus": (
+      "background-color": var(--fire-engeine-red-70),
+      "color": var(--white),
+    ),
+    "disabled": (
+      "background-color": var(--black-50),
+      "color": var(--black-70),
+    ),
+  ),
+  "ui-success": (
+    "default": (
+      "background-color": var(--lightish-green),
+      "color": var(--white),
+    ),
+    "hover": (
+      "background-color": var(--lightish-green-60),
+      "color": var(--white),
+    ),
+    "focus": (
+      "background-color": var(--lightish-green-70),
+      "color": var(--white),
+    ),
+    "disabled": (
+      "background-color": var(--black-50),
+      "color": var(--black-70),
+    ),
+  ),
+);

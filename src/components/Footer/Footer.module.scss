@@ -1,0 +1,47 @@
+@use "../../sass/abstracts" as *;
+@use "../../sass/base" as *;
+.wrapper {
+  background-color: $nav-bgr;
+  color: $white;
+  padding: 2rem 1rem 2rem 4rem;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 50px;
+    .companyContent {
+      text-align: left;
+      .companyTextContainer {
+        margin-top: 2rem;
+        width: 80%;
+      }
+    }
+    .siteNavigationsContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      .navColumns {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        a {
+          color: inherit;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    a {
+      margin-inline: 1rem;
+      color: inherit;
+      font-weight: 500;
+    }
+  }
+}

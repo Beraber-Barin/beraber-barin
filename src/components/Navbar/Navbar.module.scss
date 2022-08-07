@@ -1,0 +1,97 @@
+@use "../../sass/abstracts" as *;
+@use "../../sass/base" as *;
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $nav-bgr;
+  height: 75px;
+  padding: rem(5) rem(20);
+  .companyInfo {
+    @extend %flex-row-center;
+    color: $yellow;
+    gap: 10px;
+    img {
+      width: 60px;
+      height: 40px;
+    }
+  }
+  .inputContainer {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    .inputWrapper {
+      border-radius: rem(15);
+      border: 3px solid $yellow;
+      padding: rem(13) rem(16);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      cursor: text;
+      img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+      }
+      input {
+        font-size: rem(18);
+        border: none;
+        outline: none;
+        margin-left: 0.5rem;
+        background-color: $nav-bgr;
+        color: $white;
+      }
+    }
+  }
+  .userInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(30);
+    img {
+      cursor: pointer;
+    }
+    .navLink {
+      color: $white;
+    }
+    .bellIcon {
+      width: rem(25);
+      height: rem(30);
+    }
+    .userPic {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin: 1rem 1rem 0 0;
+  min-width: 250px;
+  min-height: 100px;
+  background-color: $nav-bgr;
+  border-radius: rem(15);
+  padding: 1rem 2rem;
+  z-index: 99999;
+  .links {
+    display: flex;
+    flex-direction: column;
+    a {
+      width: 100%;
+      color: $white;
+      padding: 0.2rem 0.45rem;
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+  .btn {
+    margin-top: 0.5rem;
+    width: 100%;
+    padding: 0.3rem 0.7rem;
+  }
+}

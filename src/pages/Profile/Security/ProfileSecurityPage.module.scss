@@ -1,0 +1,52 @@
+@use "../../../sass/abstracts" as *;
+@use "../../../sass/base" as *;
+.wrapper {
+  min-width: 600px;
+  h3 {
+    margin: 2.5rem 0 1.25rem 0;
+  }
+  .allInputContainer {
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: rem(70);
+    .passwordsContainer {
+      min-width: 250px;
+    }
+    .rightContainer {
+      max-width: 500px;
+    }
+  }
+  .bottomContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .resetPassword {
+      margin: 1rem 0;
+    }
+    .btnContainer {
+      margin-left: 4rem;
+      @extend %flex-row-center;
+      gap: rem(16);
+      .btn {
+        min-width: 200px;
+      }
+    }
+  }
+  .inputContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    label {
+      font-size: rem(20);
+    }
+    input {
+      border: 3px solid $darker-gray;
+      border-radius: rem(15);
+      font-size: rem(18);
+      padding: rem(13) rem(16);
+    }
+  }
+}

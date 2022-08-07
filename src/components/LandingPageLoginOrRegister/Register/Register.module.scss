@@ -1,0 +1,30 @@
+@use "../../../sass/abstracts" as *;
+@use "../../../sass/base" as *;
+.wrapper {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: rem(16);
+  .nameInputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: rem(16);
+    // gap: rem(16);
+  }
+}
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  input {
+    border: 3px solid $darker-gray;
+    border-radius: rem(15);
+    font-size: rem(18);
+    padding: rem(13) rem(16);
+  }
+}
+a {
+  color: $blue;
+  text-align: center;
+}

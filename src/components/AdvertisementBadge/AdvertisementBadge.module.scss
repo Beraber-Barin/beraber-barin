@@ -1,0 +1,58 @@
+@use "../../sass/abstracts" as *;
+@use "../../sass/base" as *;
+.wrapper {
+  background-color: $carousel-bgr;
+  box-shadow: -4px -4px 8px rgba(0, 0, 0, 0.05), 4px 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: rem(30);
+  max-width: 600px;
+  padding: 0.7rem 1.7rem 1.5rem 1.7rem;
+  display: flex;
+  flex-direction: column;
+  .availablity {
+    text-align: end;
+    color: $green;
+    font-weight: 500;
+  }
+  .body {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: rem(20);
+    .imgContainer {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        aspect-ratio: 1;
+        border-radius: rem(30);
+      }
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span {
+          font-weight: 500;
+        }
+      }
+      .icons {
+        .iconWrapper {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+        .bottomContainer {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          a {
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
+}

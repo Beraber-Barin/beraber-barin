@@ -1,0 +1,50 @@
+@use "variables" as *;
+@use "sass:list";
+@use "sass:map";
+@use "sass:color";
+
+@mixin btnBorderMixin($type) {
+  $colorPlaceHolder: "transparent" !default;
+  @if $type == "ghost" {
+    $colorPlaceHolder: var(--black-50);
+  }
+  border: 2px solid #{$colorPlaceHolder};
+}
+
+//based on button sizes, set =>
+//paddings, width&height, textSize
+@mixin btnSizesAndPaddings {
+  $len: length($btn-sizes);
+  @for $index from 1 through $len {
+    $btnSize: nth($btn-sizes, $index);
+    $padding: nth($btn-paddings, $index);
+    $widthAndHeight: nth($btn-icon-width-height, $index);
+    $textSize: nth($btn-text-size, $index);
+
+    @if $btnSize == "default" {
+      & {
+        padding: nth($padding, 1) nth($padding, 2);
+        font-size: $textSize;
+        & svg {
+          width: nth($widthAndHeight, 1);
+          height: nth($widthAndHeight, 2);
+        }
+      }
+    } @else {
+      &.#{$btnSize} {
+        padding: nth($padding, 1) nth($padding, 2);
+        font-size: $textSize;
+        & svg {
+          width: nth($widthAndHeight, 1);
+          height: nth($widthAndHeight, 2);
+        }
+      }
+    }
+  }
+}
+
+@mixin desktop {
+  @media (min-width:#{$desktop-width}) {
+    @content;
+  }
+}
