@@ -39,7 +39,7 @@ const Navbar = () => {
       </div>
       <div className={styles.userInfo}>
         <img className={styles.bellIcon} src={bell} alt="bell" />
-        <NavLink to="/" className={({ isActive }) => styles.navLink}>
+        <NavLink to="/ilanlarim" className={({ isActive }) => styles.navLink}>
           İlanlarım
         </NavLink>
         <NavLink to="/" className={({ isActive }) => styles.navLink}>

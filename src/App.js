@@ -12,6 +12,7 @@ import {
   ProfileSharedLayout,
   ProtectedRoute,
   LandingPage,
+  AddAdvertisementPage,
 } from "./pages";
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           >
             <Route index element={<HomePage />} />
             <Route path="/ilanlarim" element={<AdvertisementPage />} />
+            <Route path="/ilan-ekle" element={<AddAdvertisementPage />} />
           </Route>
           <Route
             path="/user"

@@ -9,6 +9,7 @@ import AdvertisementPage from "./AdvertisementPage/AdvertisementPage";
 import ProfileSharedLayout from "./ProfileSharedLayout/ProfileSharedLayout";
 import ProtectedRoute from "./ProtectedRoute/ProtectedRoute";
 import LandingPage from "./LandingPage/LandingPage";
+import AddAdvertisementPage from "./AddAdvertisementPage/AddAdvertisementPage";
 export {
   SharedLayout,
   ProfileInfoPage,
@@ -21,4 +22,5 @@ export {
   ProfileSharedLayout,
   ProtectedRoute,
   LandingPage,
+  AddAdvertisementPage,
 };

@@ -1,0 +1,18 @@
+@use "../../sass/abstracts" as *;
+@use "../../sass/base" as *;
+
+.wrapper {
+  cursor: pointer;
+  background-color: $light-gray;
+  min-width: rem(120);
+  height: rem(55);
+  padding: rem(5) rem(10);
+  border-radius: rem(50);
+  @extend %flex-row-center;
+  .tagName {
+    flex-wrap: nowrap;
+  }
+  &.isSelected {
+    border: 3px solid $darker-yellow;
+  }
+}

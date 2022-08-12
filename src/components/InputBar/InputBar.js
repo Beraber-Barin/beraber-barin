@@ -4,12 +4,22 @@ import Button from "../Button/Button";
 import btnStyles from "../Button/Button.module.scss";
 import { ReactComponent as PlusIcon } from "../../assets/svg/plus.svg";
 import { ReactComponent as ShuffleIcon } from "../../assets/svg/shuffle.svg";
+import { ReactComponent as DownArrow } from "../../assets/svg/downArrow.svg";
+import { dropdownData } from "../../assets/sampleData/dropdownData";
 import { useNavigate } from "react-router-dom";
+import SelectInput from "../SelectInput/SelectInput";
 const InputBar = () => {
   let navigate = useNavigate();
   return (
     <div className={styles.wrapper}>
-      <div style={{ width: "250px", backgroundColor: "grey" }}>select</div>
+      <div>
+        <SelectInput
+          placeholder="Konum Değiştir - Üsküdar"
+          dropdownIsVisibleIcon={<DownArrow />}
+          dropdownIsHiddenIcon={<DownArrow />}
+          data={dropdownData}
+        />
+      </div>
       <div>
         <Button
           className={btnStyles.btn + " " + btnStyles.secondary}
@@ -33,7 +43,7 @@ const InputBar = () => {
           buttonText="İlan oluştur"
           leftIcon={<PlusIcon />}
           type="button"
-          onClick={() => navigate("/ilanlarim")}
+          onClick={() => navigate("/ilan-ekle")}
         />
       </div>
     </div>
